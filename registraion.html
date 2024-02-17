@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> grocery-Registration-form  </title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="Registration.css">
+
+</head>
+<body>
+   
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>grocery</a>
+
+   </div>
+
+        <div class="header-2">
+
+            <div id="menu-bar" class="fas fa-bars"></div>
+    
+            <nav class="navbar">
+                <a href="Home.html" target="_blank">home</a>
+               
+            </nav>
+
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+           
+        </div>
+
+       
+  
+</header>    
+
+
+<section class="contact" id="contact">
+
+    <h1 class="heading">Registration</h1>
+
+    <form action="registraion.php" method="POST">
+
+        <div class="inputBox">
+            <input type="Name" id="Name" name="Name"placeholder="Name" required><br><br>
+
+            <input type="email" id="email" name="email"placeholder="Email" required><br><br>
+        
+            <input type="password" id="pwd" name="pwd" minlength="8" placeholder="Password" required><br><br>
+
+            <input type="RepeatPassword" id="Repwd" name="Repwd" minlength="8" placeholder="Repeat Password" required><br><br>
+
+            <button type="submit" class="btnsubmit"formaction="registraion.php" onclick="RegValidation()">Submit</button>
+        </div>
+    
+    </form>
+
+
+    
+   
+    
+  </div>
+
+</section>
+<script lang="Javascript">
+    function RegValidation()
+    {
+                var username = document.getElementById("Name").value;
+                var mail = document.getElementById("email").value;
+                var password = document.getElementById("pwd").value;
+                var Repassword = document.getElementById("Repwd").value;
+                if (username == null || username == "") {
+                    alert("Please enter the Name.");
+                    return false;
+                }
+                else  if (mail.lenght== null ||mail.lenght== "") {
+                    alert("Please enter the email.");
+                    return false;
+                }
+                else  if (password.lenght== null ||password.lenght== "") {
+                    alert("Please enter the password agian.");
+                    return false;
+                }
+                else  if (Repassword.lenght == null || Repassword.lenght== "") {
+                    alert("Please enter the Re-password agian.");
+                    return false;
+                }
+                alert(' Registration successful');
+                
+           
+    }
+    
+    </script>
+    
+
+</body>
+</html>
